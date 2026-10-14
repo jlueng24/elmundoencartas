@@ -525,6 +525,7 @@
                     </div>
                     <button id="goToMode" type="button" class="home-continue">Continuar <span aria-hidden="true">→</span></button>
                     <p class="home-after">Después elegirás cómo quieres jugar.</p>
+                    <p class="profile-sync-status text-xs text-teal-700 mt-2" role="status">☁ Entra con Google desde Liga para guardar tu progreso.</p>
                   </div>
                   <div class="home-art" aria-hidden="true">
                     <span class="home-globe">🌍</span>
@@ -563,6 +564,7 @@
                 <h2 id="mode-title">Elige cómo quieres jugar</h2>
                 <p class="mode-intro"><span id="modePlayerName">Jugador</span>, elige un modo y prepara tu partida.</p>
                 <p id="catalogStatus" class="mode-catalog" role="status">Cargando países…</p>
+                <p class="profile-sync-status text-xs text-teal-700" role="status">☁ Entra con Google desde Liga para guardar tu progreso.</p>
                 <div class="mode-grid">
                   <button type="button" class="mode-btn" data-mode="flags" data-desc="Reconoce el país">⚑ Banderas</button>
                   <button type="button" class="mode-btn" data-mode="capitals" data-desc="Adivina la ciudad">▥ Capitales</button>
@@ -700,7 +702,7 @@
                 <ul class="list-disc pl-5 space-y-1 text-slate-700 text-sm">
                   <li>Responde con botones o con las teclas <span class="kbd">A</span> a <span class="kbd">D</span> o <span class="kbd">1</span> a <span class="kbd">4</span>. <span class="kbd">P</span> pausa.</li>
                   <li>En <strong>Estudio</strong> no hay tiempo; si fallas, esa pregunta vuelve más tarde.</li>
-                  <li>Logros y álbum se guardan en este navegador. Las ligas privadas comparten resultados entre amigos al iniciar sesión con Google.</li>
+                  <li>Al entrar con Google, tu álbum, logros, pines, historial y estadísticas se guardan en tu cuenta. Las ligas comparten resultados entre amigos.</li>
                 </ul>
               </div>
               <div class="bg-slate-50 p-4 flex justify-end gap-2">
@@ -721,6 +723,7 @@
                   <p id="cloudStatus" role="status" aria-live="polite">Preparando ligas…</p>
                   <div id="cloudSignedOut"><button id="cloudSignIn" type="button">Continuar con Google</button></div>
                   <div id="cloudSignedIn" class="cloud-row" hidden><span id="cloudAccount"></span><button id="cloudSignOut" type="button">Salir de la cuenta</button></div>
+                  <p id="cloudProgressStatus" role="status" aria-live="polite">☁ Entra con Google para guardar tu progreso.</p>
                   <div id="cloudLeagueArea" hidden>
                     <div class="cloud-row"><input id="cloudNewLeague" maxlength="40" placeholder="Nombre de tu liga" aria-label="Nombre de tu liga" /><button id="cloudCreate" type="button">Crear liga</button></div>
                     <div class="cloud-row"><input id="cloudJoinCode" maxlength="10" placeholder="Código de invitación" aria-label="Código de invitación" /><button id="cloudJoin" type="button">Unirme</button></div>
@@ -733,7 +736,7 @@
                     </div>
                   </div>
                 </div>
-                <details><summary class="font-semibold text-slate-600 cursor-pointer">Historial local de este navegador</summary>
+                <details><summary class="font-semibold text-slate-600 cursor-pointer">Historial personal de partidas</summary>
                 <div class="grid sm:grid-cols-3 gap-4 mt-4">
                   <div class="sm:col-span-2">
                     <div class="flex items-center justify-between mb-2">
@@ -749,7 +752,7 @@
                       <button id="saveLeagueName" type="button" class="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold">Guardar</button>
                       <button id="resetLeague" type="button" class="px-3 py-2 rounded-xl bg-rose-100 hover:bg-rose-200 text-rose-700 text-sm font-semibold">Borrar datos</button>
                     </div>
-                    <p class="text-[11px] text-slate-500 mt-2">Datos locales (localStorage).</p>
+                    <p class="text-[11px] text-slate-500 mt-2">Al entrar con Google, el historial se guarda en tu cuenta.</p>
                   </div>
                 </div>
                 </details>
@@ -870,10 +873,11 @@
 <script src="./achievements.js?v=0310-39" defer></script>
 <script src="./country-card-data.js?v=0310-39" defer></script>
 <script src="./country-mysteries.js?v=1014-46" defer></script>
-<script src="./app.js?v=1014-50" defer></script>
+<script src="./app.js?v=1014-52" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3" defer></script>
 <script src="./cloud-config.js?v=1014-51" defer></script>
-<script src="./cloud-leagues.js?v=1014-50" defer></script>
+<script src="./cloud-progress.js?v=1014-52" defer></script>
+<script src="./cloud-leagues.js?v=1014-52" defer></script>
 
     </div>
     </div>
