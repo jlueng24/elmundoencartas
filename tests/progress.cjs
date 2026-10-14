@@ -5,6 +5,7 @@ const vm=require('node:vm');
 
 const code=fs.readFileSync(path.join(__dirname,'../cloud-progress.js'),'utf8');
 const rows=new Map();
+let offline=false;
 const clone=x=>x===undefined?undefined:JSON.parse(JSON.stringify(x));
 const database={
   from(table){
@@ -16,6 +17,7 @@ const database={
       insert(value){op='insert';payload=value;return query},
       update(value){op='update';payload=value;return query},
       async maybeSingle(){
+        if(offline)return {data:null,error:{message:'Sin conexión'}};
         const row=rows.get(filters.user_id);
         if(op==='read')return {data:clone(row)||null,error:null};
         if(!row || row.revision!==filters.revision)return {data:null,error:null};
@@ -24,6 +26,7 @@ const database={
         return {data:{revision:next.revision},error:null};
       },
       async single(){
+        if(offline)return {data:null,error:{message:'Sin conexión'}};
         if(rows.has(payload.user_id))return {data:null,error:{code:'23505'}};
         rows.set(payload.user_id,{data:clone(payload.data),revision:1});
         return {data:{revision:1},error:null};
@@ -92,6 +95,14 @@ function device(initial={},id){
   assert.ok(rows.get('user-a').data.fields.pro_albums_v2.fr,'una escritura simultánea no pierde Francia');
   assert.ok(rows.get('user-a').data.fields.pro_albums_v2.de,'una escritura simultánea no pierde Alemania');
 
+  offline=true;
+  phone.set('pro_albums_v2',{...phone.get('pro_albums_v2'),pt:{code:'pt',flag:{unlocked:true,hits:1},capital:{unlocked:false,hits:0}}});
+  await assert.rejects(phone.api.flush(),error=>error.message==='Sin conexión');
+  assert.ok(phone.get('pro_albums_v2').pt,'sin conexión, la carta se conserva en el dispositivo');
+  offline=false;
+  await phone.api.flush();
+  assert.ok(rows.get('user-a').data.fields.pro_albums_v2.pt,'al reconectar, sube la carta pendiente');
+
   await phone.api.setUser(null);
   assert.equal(phone.get('pro_albums_v2'),null,'al salir se separa el progreso de la cuenta');
   await phone.api.setUser({id:'user-b'});
@@ -99,5 +110,5 @@ function device(initial={},id){
   await phone.api.setUser(null);
   await phone.api.setUser({id:'user-a'});
   assert.ok(phone.get('pro_albums_v2').jp,'la primera cuenta recupera sus cartas');
-  console.log('OK: migración, dos dispositivos, escrituras simultáneas, cartas/logros/estadísticas, cambio de cuenta');
+  console.log('OK: migración, dos dispositivos, simultaneidad, desconexión, cartas/logros/estadísticas, cambio de cuenta');
 })().catch(error=>{console.error(error);process.exitCode=1});
