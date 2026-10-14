@@ -1,6 +1,9 @@
 -- Cartas del Mundo: ligas privadas. Ejecutar una vez en el SQL Editor de Supabase.
 begin;
 create extension if not exists pgcrypto;
+create schema if not exists game_private;
+revoke all on schema game_private from public, anon;
+grant usage on schema game_private to authenticated;
 
 create table if not exists public.game_leagues (
   id uuid primary key default gen_random_uuid(),
@@ -63,20 +66,21 @@ revoke all on public.game_leagues,public.game_league_members,
 grant select on public.game_leagues,public.game_league_members,
   public.game_league_attempts,public.game_league_daily to authenticated;
 
-create or replace function public.is_game_league_member(p_league_id uuid)
+-- Helper used by RLS; the schema is not exposed through the Data API.
+create or replace function game_private.is_game_league_member(p_league_id uuid)
 returns boolean language sql stable security definer set search_path = '' as $$
   select exists(select 1 from public.game_league_members m
     where m.league_id=p_league_id and m.user_id=(select auth.uid()));
 $$;
 
 create policy "Members read their leagues" on public.game_leagues for select to authenticated
-  using (public.is_game_league_member(id));
+  using (game_private.is_game_league_member(id));
 create policy "Members read members" on public.game_league_members for select to authenticated
-  using (public.is_game_league_member(league_id));
+  using (game_private.is_game_league_member(league_id));
 create policy "Members read attempts" on public.game_league_attempts for select to authenticated
-  using (public.is_game_league_member(league_id));
+  using (game_private.is_game_league_member(league_id));
 create policy "Members read daily results" on public.game_league_daily for select to authenticated
-  using (public.is_game_league_member(league_id));
+  using (game_private.is_game_league_member(league_id));
 
 create or replace function public.create_game_league(p_name text,p_display_name text)
 returns public.game_leagues language plpgsql security definer set search_path = '' as $$
@@ -114,7 +118,7 @@ create or replace function public.reserve_game_attempt(p_league_id uuid,p_catego
 returns public.game_league_attempts language plpgsql security definer set search_path = '' as $$
 declare v_week date; v_count integer; v_attempt public.game_league_attempts;
 begin
-  if auth.uid() is null or not public.is_game_league_member(p_league_id) then
+  if auth.uid() is null or not game_private.is_game_league_member(p_league_id) then
     raise exception 'No perteneces a esta liga';
   end if;
   if p_category not in ('flags','capitals','mixed','study','survival_flags','survival_capitals','survival_mixed') then
@@ -180,11 +184,13 @@ begin
 end;
 $$;
 
-revoke all on function public.is_game_league_member(uuid),public.create_game_league(text,text),
+revoke all on function game_private.is_game_league_member(uuid) from public,anon;
+grant execute on function game_private.is_game_league_member(uuid) to authenticated;
+revoke all on function public.create_game_league(text,text),
   public.join_game_league(text,text),public.reserve_game_attempt(uuid,text),
   public.finish_game_attempt(uuid,integer,integer,integer,integer,integer),
   public.submit_game_daily(date,boolean,integer) from public,anon;
-grant execute on function public.is_game_league_member(uuid),public.create_game_league(text,text),
+grant execute on function public.create_game_league(text,text),
   public.join_game_league(text,text),public.reserve_game_attempt(uuid,text),
   public.finish_game_attempt(uuid,integer,integer,integer,integer,integer),
   public.submit_game_daily(date,boolean,integer) to authenticated;
