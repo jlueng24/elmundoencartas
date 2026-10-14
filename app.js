@@ -122,7 +122,13 @@ function fxStreak(){ let t=0; [660,880,990,1180].forEach((f)=>{ setTimeout(()=>p
 
 /* ========= Helpers Storage ========= */
 function lsGet(k, def){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
-function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
+function lsSet(k, v){
+  try{
+    localStorage.setItem(k, JSON.stringify(v));
+    if(typeof CustomEvent==='function' && window.dispatchEvent)
+      window.dispatchEvent(new CustomEvent('cartas:progress-local-change',{detail:{key:k}}));
+  }catch{}
+}
 
 /* ========= Carga de datos ========= */
 const WORLD_DATA_URL = 'https://cdn.jsdelivr.net/gh/mledoze/countries@master/countries.json';
@@ -709,7 +715,16 @@ window.CartasGame = {
     return newGame();
   },
   catalogReady(){return catalogScope === 'world';},
-  dailyResult(){return lsGet(LS.challenge,{})[todayStr()] || null;}
+  dailyResult(){return lsGet(LS.challenge,{})[todayStr()] || null;},
+  refreshProgress(){
+    playerName=lsGet(LS.name,'') || '';
+    ui.playerInput.value=playerName;
+    $('#modePlayerName').textContent=playerName || 'Jugador';
+    updateDailyTile();
+    if(ui.albumModal?.open)renderAlbum();
+    if($('#dailyModal')?.open)renderDailyModal();
+    if($('#leagueModal')?.open)renderLeague();
+  }
 };
 
 
