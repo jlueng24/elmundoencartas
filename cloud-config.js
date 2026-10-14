@@ -1,6 +1,6 @@
-// Rellena estos dos datos del proyecto Supabase. La clave publicable puede estar en el navegador.
-// Nunca pongas aquí una clave secreta ni la service_role.
+// Configuración pública de Supabase para Cartas del Mundo.
+// Nunca incluyas aquí una clave secreta o service_role.
 window.CARTAS_CLOUD = {
-  url: '',
-  publishableKey: ''
+  url: 'https://sqfqrkemtrlmzcrjfgft.supabase.co',
+  publishableKey: 'sb_publishable_Ji9cZdzAYA4mhlrEkf-ykg_Jjlwzejx'
 };
