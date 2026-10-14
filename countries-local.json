@@ -1,0 +1,28 @@
+{
+  "description": "Catálogo de respaldo para jugar en Europa cuando no se pueda cargar el catálogo mundial.",
+  "countries": [
+    ["al", "Albania", "Tirana"], ["de", "Alemania", "Berlín"],
+    ["ad", "Andorra", "Andorra la Vieja"], ["at", "Austria", "Viena"],
+    ["by", "Bielorrusia", "Minsk"], ["be", "Bélgica", "Bruselas"],
+    ["ba", "Bosnia y Herzegovina", "Sarajevo"], ["bg", "Bulgaria", "Sofía"],
+    ["hr", "Croacia", "Zagreb"], ["cy", "Chipre", "Nicosia"],
+    ["dk", "Dinamarca", "Copenhague"], ["sk", "Eslovaquia", "Bratislava"],
+    ["si", "Eslovenia", "Liubliana"], ["es", "España", "Madrid"],
+    ["ee", "Estonia", "Tallin"], ["fi", "Finlandia", "Helsinki"],
+    ["fr", "Francia", "París"], ["gr", "Grecia", "Atenas"],
+    ["hu", "Hungría", "Budapest"], ["ie", "Irlanda", "Dublín"],
+    ["is", "Islandia", "Reikiavik"], ["it", "Italia", "Roma"],
+    ["lv", "Letonia", "Riga"], ["li", "Liechtenstein", "Vaduz"],
+    ["lt", "Lituania", "Vilna"], ["lu", "Luxemburgo", "Luxemburgo"],
+    ["mt", "Malta", "La Valeta"], ["md", "Moldavia", "Chisináu"],
+    ["mc", "Mónaco", "Mónaco"], ["me", "Montenegro", "Podgorica"],
+    ["no", "Noruega", "Oslo"], ["nl", "Países Bajos", "Ámsterdam"],
+    ["pl", "Polonia", "Varsovia"], ["pt", "Portugal", "Lisboa"],
+    ["gb", "Reino Unido", "Londres"], ["cz", "Chequia", "Praga"],
+    ["ro", "Rumanía", "Bucarest"], ["ru", "Rusia", "Moscú"],
+    ["sm", "San Marino", "San Marino"], ["rs", "Serbia", "Belgrado"],
+    ["se", "Suecia", "Estocolmo"], ["ch", "Suiza", "Berna"],
+    ["ua", "Ucrania", "Kiev"], ["va", "Ciudad del Vaticano", "Ciudad del Vaticano"],
+    ["mk", "Macedonia del Norte", "Skopie"]
+  ]
+}

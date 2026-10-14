@@ -1,0 +1,895 @@
+{
+  "achievements": [
+    {
+      "id": "exploracion_continentes",
+      "name": "Ciudadano del mundo",
+      "desc": "Terminas una partida en cada una de las cinco regiones.",
+      "category": "Exploración",
+      "idea": "Globo con líneas de ruta y pines de colores.",
+      "art": "./img/logros/exploracion_continentes.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "progreso_primer_paso",
+      "name": "Primer paso",
+      "desc": "Juegas tu primera partida.",
+      "category": "Progreso",
+      "idea": "Huella brillante sobre un mapa del mundo estilizado.",
+      "art": "./img/logros/progreso_primer_paso.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_africa",
+      "name": "Primera bandera africana",
+      "desc": "Aciertas tu primera bandera en África.",
+      "category": "Progreso",
+      "idea": "Sabana, sol y bandera.",
+      "art": "./img/logros/primer_bandera_africa.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_america",
+      "name": "Primera bandera americana",
+      "desc": "Aciertas tu primera bandera en América.",
+      "category": "Progreso",
+      "idea": "Brújula sobre dos continentes.",
+      "art": "./img/logros/primer_bandera_america.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_asia",
+      "name": "Primera bandera asiática",
+      "desc": "Aciertas tu primera bandera en Asia.",
+      "category": "Progreso",
+      "idea": "Templo y banderín rojo.",
+      "art": "./img/logros/primer_bandera_asia.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_europa",
+      "name": "Primera bandera europea",
+      "desc": "Aciertas tu primera bandera en Europa.",
+      "category": "Progreso",
+      "idea": "Bandera + estrellas europeas.",
+      "art": "./img/logros/primer_bandera_europa.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_mundo",
+      "name": "Primera bandera mundial",
+      "desc": "Aciertas tu primera bandera en cualquier región.",
+      "category": "Progreso",
+      "idea": "Bandera ondeando sobre globo.",
+      "art": "./img/logros/primer_bandera_mundo.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_bandera_oceania",
+      "name": "Primera bandera oceánica",
+      "desc": "Aciertas tu primera bandera en Oceanía.",
+      "category": "Progreso",
+      "idea": "Isla con olas y bandera.",
+      "art": "./img/logros/primer_bandera_oceania.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_africa",
+      "name": "Primera capital africana",
+      "desc": "Aciertas tu primera capital en África.",
+      "category": "Progreso",
+      "idea": "Ciudades en la sabana.",
+      "art": "./img/logros/primer_capital_africa.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_america",
+      "name": "Primera capital americana",
+      "desc": "Aciertas tu primera capital en América.",
+      "category": "Progreso",
+      "idea": "Skyline sobre brújula.",
+      "art": "./img/logros/primer_capital_america.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_asia",
+      "name": "Primera capital asiática",
+      "desc": "Aciertas tu primera capital en Asia.",
+      "category": "Progreso",
+      "idea": "Pagoda y amanecer.",
+      "art": "./img/logros/primer_capital_asia.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_europa",
+      "name": "Primera capital europea",
+      "desc": "Aciertas tu primera capital en Europa.",
+      "category": "Progreso",
+      "idea": "Columna clásica y estrellas.",
+      "art": "./img/logros/primer_capital_europa.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_mundo",
+      "name": "Primera capital mundial",
+      "desc": "Aciertas tu primera capital en cualquier región.",
+      "category": "Progreso",
+      "idea": "Cúpula/edificio sobre globo.",
+      "art": "./img/logros/primer_capital_mundo.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "primer_capital_oceania",
+      "name": "Primera capital oceánica",
+      "desc": "Aciertas tu primera capital en Oceanía.",
+      "category": "Progreso",
+      "idea": "Edificio cívico en isla.",
+      "art": "./img/logros/primer_capital_oceania.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "progreso_veterano_50",
+      "name": "Veterano mundial",
+      "desc": "Juegas 50 partidas en total.",
+      "category": "Progreso",
+      "idea": "Mapa con rutas luminosas y chapas de países.",
+      "art": "./img/logros/progreso_veterano_50.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "rachas_25",
+      "name": "Fuego eterno",
+      "desc": "Alcanzas 25 aciertos consecutivos entre partidas.",
+      "category": "Rachas",
+      "idea": "Anillo de fuego rodeando el número 25 con brillo cálido.",
+      "art": "./img/logros/rachas_25.svg",
+      "tier": "épico"
+    },
+    {
+      "id": "rachas_10",
+      "name": "Racha x10",
+      "desc": "Logras 10 aciertos consecutivos.",
+      "category": "Rachas",
+      "idea": "Corona dorada sobre número 10 en llamas suaves.",
+      "art": "./img/logros/rachas_10.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "rachas_3",
+      "name": "Racha x3",
+      "desc": "Consigues 3 aciertos consecutivos.",
+      "category": "Rachas",
+      "idea": "Tres chispas formando un 3 con efecto glow.",
+      "art": "./img/logros/rachas_3.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "reto_primero",
+      "name": "Reto aceptado",
+      "desc": "Completas tu primer reto del día.",
+      "category": "Reto del día",
+      "idea": "Calendario con una estrella brillante marcada.",
+      "art": "./img/logros/reto_primero.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_mundo_25",
+      "series": "supervivencia_flags_mundo",
+      "stage": 25,
+      "name": "25 % · Banderas · Mundo",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_mundo_50",
+      "series": "supervivencia_flags_mundo",
+      "stage": 50,
+      "name": "50 % · Banderas · Mundo",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_mundo_75",
+      "series": "supervivencia_flags_mundo",
+      "stage": 75,
+      "name": "75 % · Banderas · Mundo",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_mundo_100",
+      "series": "supervivencia_flags_mundo",
+      "stage": 100,
+      "name": "Soberano de las banderas del mundo",
+      "desc": "Completa Supervivencia de Banderas en Mundo sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_europa_25",
+      "series": "supervivencia_flags_europa",
+      "stage": 25,
+      "name": "25 % · Banderas · Europa",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_europa_50",
+      "series": "supervivencia_flags_europa",
+      "stage": 50,
+      "name": "50 % · Banderas · Europa",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_europa_75",
+      "series": "supervivencia_flags_europa",
+      "stage": 75,
+      "name": "75 % · Banderas · Europa",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_europa_100",
+      "series": "supervivencia_flags_europa",
+      "stage": 100,
+      "name": "Rey de Europa",
+      "desc": "Completa Supervivencia de Banderas en Europa sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_asia_25",
+      "series": "supervivencia_flags_asia",
+      "stage": 25,
+      "name": "25 % · Banderas · Asia",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_asia_50",
+      "series": "supervivencia_flags_asia",
+      "stage": 50,
+      "name": "50 % · Banderas · Asia",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_asia_75",
+      "series": "supervivencia_flags_asia",
+      "stage": 75,
+      "name": "75 % · Banderas · Asia",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_asia_100",
+      "series": "supervivencia_flags_asia",
+      "stage": 100,
+      "name": "Rey de Asia",
+      "desc": "Completa Supervivencia de Banderas en Asia sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_america_25",
+      "series": "supervivencia_flags_america",
+      "stage": 25,
+      "name": "25 % · Banderas · América",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_america_50",
+      "series": "supervivencia_flags_america",
+      "stage": 50,
+      "name": "50 % · Banderas · América",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_america_75",
+      "series": "supervivencia_flags_america",
+      "stage": 75,
+      "name": "75 % · Banderas · América",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_america_100",
+      "series": "supervivencia_flags_america",
+      "stage": 100,
+      "name": "Rey de América",
+      "desc": "Completa Supervivencia de Banderas en América sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_africa_25",
+      "series": "supervivencia_flags_africa",
+      "stage": 25,
+      "name": "25 % · Banderas · África",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_africa_50",
+      "series": "supervivencia_flags_africa",
+      "stage": 50,
+      "name": "50 % · Banderas · África",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_africa_75",
+      "series": "supervivencia_flags_africa",
+      "stage": 75,
+      "name": "75 % · Banderas · África",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_africa_100",
+      "series": "supervivencia_flags_africa",
+      "stage": 100,
+      "name": "Rey de África",
+      "desc": "Completa Supervivencia de Banderas en África sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_oceania_25",
+      "series": "supervivencia_flags_oceania",
+      "stage": 25,
+      "name": "25 % · Banderas · Oceanía",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Banderas en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_flags_oceania_50",
+      "series": "supervivencia_flags_oceania",
+      "stage": 50,
+      "name": "50 % · Banderas · Oceanía",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Banderas en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_flags_oceania_75",
+      "series": "supervivencia_flags_oceania",
+      "stage": 75,
+      "name": "75 % · Banderas · Oceanía",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Banderas en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_flags_oceania_100",
+      "series": "supervivencia_flags_oceania",
+      "stage": 100,
+      "name": "Rey de Oceanía",
+      "desc": "Completa Supervivencia de Banderas en Oceanía sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_banderas.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_mundo_25",
+      "series": "supervivencia_capitals_mundo",
+      "stage": 25,
+      "name": "25 % · Capitales · Mundo",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_mundo_50",
+      "series": "supervivencia_capitals_mundo",
+      "stage": 50,
+      "name": "50 % · Capitales · Mundo",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_mundo_75",
+      "series": "supervivencia_capitals_mundo",
+      "stage": 75,
+      "name": "75 % · Capitales · Mundo",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_mundo_100",
+      "series": "supervivencia_capitals_mundo",
+      "stage": 100,
+      "name": "Sabio de todas las capitales",
+      "desc": "Completa Supervivencia de Capitales en Mundo sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mundo.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_europa_25",
+      "series": "supervivencia_capitals_europa",
+      "stage": 25,
+      "name": "25 % · Capitales · Europa",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_europa_50",
+      "series": "supervivencia_capitals_europa",
+      "stage": 50,
+      "name": "50 % · Capitales · Europa",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_europa_75",
+      "series": "supervivencia_capitals_europa",
+      "stage": 75,
+      "name": "75 % · Capitales · Europa",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_europa_100",
+      "series": "supervivencia_capitals_europa",
+      "stage": 100,
+      "name": "Maestro de Europa",
+      "desc": "Completa Supervivencia de Capitales en Europa sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_asia_25",
+      "series": "supervivencia_capitals_asia",
+      "stage": 25,
+      "name": "25 % · Capitales · Asia",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_asia_50",
+      "series": "supervivencia_capitals_asia",
+      "stage": 50,
+      "name": "50 % · Capitales · Asia",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_asia_75",
+      "series": "supervivencia_capitals_asia",
+      "stage": 75,
+      "name": "75 % · Capitales · Asia",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_asia_100",
+      "series": "supervivencia_capitals_asia",
+      "stage": 100,
+      "name": "Maestro de Asia",
+      "desc": "Completa Supervivencia de Capitales en Asia sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_america_25",
+      "series": "supervivencia_capitals_america",
+      "stage": 25,
+      "name": "25 % · Capitales · América",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_america_50",
+      "series": "supervivencia_capitals_america",
+      "stage": 50,
+      "name": "50 % · Capitales · América",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_america_75",
+      "series": "supervivencia_capitals_america",
+      "stage": 75,
+      "name": "75 % · Capitales · América",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_america_100",
+      "series": "supervivencia_capitals_america",
+      "stage": 100,
+      "name": "Maestro de América",
+      "desc": "Completa Supervivencia de Capitales en América sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_africa_25",
+      "series": "supervivencia_capitals_africa",
+      "stage": 25,
+      "name": "25 % · Capitales · África",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_africa_50",
+      "series": "supervivencia_capitals_africa",
+      "stage": 50,
+      "name": "50 % · Capitales · África",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_africa_75",
+      "series": "supervivencia_capitals_africa",
+      "stage": 75,
+      "name": "75 % · Capitales · África",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_africa_100",
+      "series": "supervivencia_capitals_africa",
+      "stage": 100,
+      "name": "Maestro de África",
+      "desc": "Completa Supervivencia de Capitales en África sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_oceania_25",
+      "series": "supervivencia_capitals_oceania",
+      "stage": 25,
+      "name": "25 % · Capitales · Oceanía",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Capitales en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_capitals_oceania_50",
+      "series": "supervivencia_capitals_oceania",
+      "stage": 50,
+      "name": "50 % · Capitales · Oceanía",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Capitales en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_capitals_oceania_75",
+      "series": "supervivencia_capitals_oceania",
+      "stage": 75,
+      "name": "75 % · Capitales · Oceanía",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Capitales en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_capitals_oceania_100",
+      "series": "supervivencia_capitals_oceania",
+      "stage": 100,
+      "name": "Maestro de Oceanía",
+      "desc": "Completa Supervivencia de Capitales en Oceanía sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_capitales.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_mundo_25",
+      "series": "supervivencia_mixed_mundo",
+      "stage": 25,
+      "name": "25 % · Mixto · Mundo",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_leyenda.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_mundo_50",
+      "series": "supervivencia_mixed_mundo",
+      "stage": 50,
+      "name": "50 % · Mixto · Mundo",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_leyenda.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_mundo_75",
+      "series": "supervivencia_mixed_mundo",
+      "stage": 75,
+      "name": "75 % · Mixto · Mundo",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en Mundo en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_leyenda.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_mundo_100",
+      "series": "supervivencia_mixed_mundo",
+      "stage": 100,
+      "name": "Leyenda del planeta",
+      "desc": "Completa Supervivencia de Mixto en Mundo sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_leyenda.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_europa_25",
+      "series": "supervivencia_mixed_europa",
+      "stage": 25,
+      "name": "25 % · Mixto · Europa",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_europa_50",
+      "series": "supervivencia_mixed_europa",
+      "stage": 50,
+      "name": "50 % · Mixto · Europa",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_europa_75",
+      "series": "supervivencia_mixed_europa",
+      "stage": 75,
+      "name": "75 % · Mixto · Europa",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en Europa en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_europa_100",
+      "series": "supervivencia_mixed_europa",
+      "stage": 100,
+      "name": "Leyenda de Europa",
+      "desc": "Completa Supervivencia de Mixto en Europa sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_asia_25",
+      "series": "supervivencia_mixed_asia",
+      "stage": 25,
+      "name": "25 % · Mixto · Asia",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_asia_50",
+      "series": "supervivencia_mixed_asia",
+      "stage": 50,
+      "name": "50 % · Mixto · Asia",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_asia_75",
+      "series": "supervivencia_mixed_asia",
+      "stage": 75,
+      "name": "75 % · Mixto · Asia",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en Asia en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_asia_100",
+      "series": "supervivencia_mixed_asia",
+      "stage": 100,
+      "name": "Leyenda de Asia",
+      "desc": "Completa Supervivencia de Mixto en Asia sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_america_25",
+      "series": "supervivencia_mixed_america",
+      "stage": 25,
+      "name": "25 % · Mixto · América",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_america_50",
+      "series": "supervivencia_mixed_america",
+      "stage": 50,
+      "name": "50 % · Mixto · América",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_america_75",
+      "series": "supervivencia_mixed_america",
+      "stage": 75,
+      "name": "75 % · Mixto · América",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en América en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_america_100",
+      "series": "supervivencia_mixed_america",
+      "stage": 100,
+      "name": "Leyenda de América",
+      "desc": "Completa Supervivencia de Mixto en América sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_africa_25",
+      "series": "supervivencia_mixed_africa",
+      "stage": 25,
+      "name": "25 % · Mixto · África",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_africa_50",
+      "series": "supervivencia_mixed_africa",
+      "stage": 50,
+      "name": "50 % · Mixto · África",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_africa_75",
+      "series": "supervivencia_mixed_africa",
+      "stage": 75,
+      "name": "75 % · Mixto · África",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en África en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_africa_100",
+      "series": "supervivencia_mixed_africa",
+      "stage": 100,
+      "name": "Leyenda de África",
+      "desc": "Completa Supervivencia de Mixto en África sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_oceania_25",
+      "series": "supervivencia_mixed_oceania",
+      "stage": 25,
+      "name": "25 % · Mixto · Oceanía",
+      "desc": "Acierta al menos el 25 % de Supervivencia de Mixto en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "bronce"
+    },
+    {
+      "id": "supervivencia_mixed_oceania_50",
+      "series": "supervivencia_mixed_oceania",
+      "stage": 50,
+      "name": "50 % · Mixto · Oceanía",
+      "desc": "Acierta al menos el 50 % de Supervivencia de Mixto en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "plata"
+    },
+    {
+      "id": "supervivencia_mixed_oceania_75",
+      "series": "supervivencia_mixed_oceania",
+      "stage": 75,
+      "name": "75 % · Mixto · Oceanía",
+      "desc": "Acierta al menos el 75 % de Supervivencia de Mixto en Oceanía en un solo intento.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    },
+    {
+      "id": "supervivencia_mixed_oceania_100",
+      "series": "supervivencia_mixed_oceania",
+      "stage": 100,
+      "name": "Leyenda de Oceanía",
+      "desc": "Completa Supervivencia de Mixto en Oceanía sin fallos ni tiempo agotado.",
+      "category": "Supervivencia",
+      "art": "./img/logros/supervivencia_mixto.svg",
+      "tier": "oro"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="5 3 232 248" role="img" aria-label="Cartas del Mundo"><g id="mark">
+      <rect x="30" y="28" width="150" height="198" rx="22" fill="#FFC44F" transform="rotate(-15 105 127)"/>
+      <rect x="47" y="22" width="153" height="202" rx="23" fill="#FF7869" transform="rotate(12 123 123)"/>
+      <rect x="41" y="32" width="166" height="200" rx="25" fill="#FFFFFF" stroke="#086B82" stroke-width="7"/>
+      <circle cx="124" cy="130" r="63" fill="#4BBED3" stroke="#086B82" stroke-width="6"/>
+      <path d="M95 87l17-6 14 8-4 12-14 4-4 15-14 1-11-13 8-11zM145 80l22 8 13 21-7 11-18-1-5-13-14-5zM109 145l15 4 13-7 15 5 8 19-12 16-16 7-12-8-3-16-14-6z" fill="#C8F29F"/>
+      <path d="M63 130h122M75 96c24 9 75 9 98 0M76 164c23-9 73-9 97 0" fill="none" stroke="#F3FDFF" stroke-width="3" stroke-linecap="round" opacity=".74"/>
+      <path d="M124 67c-18 18-28 38-28 63s10 47 28 63M124 67c18 18 28 38 28 63s-10 47-28 63" fill="none" stroke="#F3FDFF" stroke-width="3" stroke-linecap="round" opacity=".66"/>
+      <path d="M188 47l4.5 11.5L204 63l-11.5 4.5L188 79l-4.5-11.5L172 63l11.5-4.5z" fill="#FF7869"/>
+    </g></svg>

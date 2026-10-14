@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Corona de banderas">
+ <defs><linearGradient id="a" x2="1" y2="1"><stop stop-color="#0e7490"/><stop offset="1" stop-color="#164e63"/></linearGradient></defs>
+ <rect width="128" height="128" rx="26" fill="url(#a)"/>
+ <circle cx="64" cy="64" r="51" fill="none" stroke="#a5f3fc" stroke-width="2" opacity=".75"/>
+ <path d="M29 52l14 11 21-25 21 25 14-11-7 34H36z" fill="#fbbf24" stroke="#fef3c7" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M51 75h26M36 91h56" stroke="#fff7ed" stroke-width="3" stroke-linecap="round"/>
+ <path d="M40 20v25m0-20h23l-7 9 7 9H40" stroke="#fff" stroke-width="3" stroke-linejoin="round" fill="#f43f5e"/>
+ <circle cx="64" cy="76" r="4" fill="#0e7490"/>
+</svg>
