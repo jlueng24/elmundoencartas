@@ -7,6 +7,7 @@
   const ready = /^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/.test(cfg.url || '') &&
     typeof cfg.publishableKey === 'string' && cfg.publishableKey.length > 10 && !!window.supabase;
   const client = ready ? window.supabase.createClient(cfg.url,cfg.publishableKey) : null;
+  if(client)window.CartasProgress?.connect(client);
   const categoryNames = {
     flags:'Banderas',capitals:'Capitales',mixed:'Mixto',study:'Estudio',
     survival_flags:'Supervivencia · Banderas',
@@ -44,6 +45,7 @@
     $('#cloudSignedIn').hidden=!user;
     $('#cloudAccount').textContent=user?.email || '';
     $('#cloudLeagueArea').hidden=!user;
+    $('#resetLeague').hidden=!!user;
   }
   async function check(result){
     if(result.error) throw new Error(result.error.message);
@@ -146,16 +148,20 @@
       const pending=JSON.parse(localStorage.getItem('cartas_pending_league_results')||'[]');
       const remaining=[];
       for(const result of pending){
+        if(result.userId && result.userId!==user.id){remaining.push(result);continue}
         try{await saveResult(result)}catch(error){remaining.push(result);status('Resultado pendiente de subir: '+error.message,true)}
       }
       localStorage.setItem('cartas_pending_league_results',JSON.stringify(remaining));
-      if(pending.length && !remaining.length){status('Resultado guardado en la liga.');await refresh()}
+      if(pending.some(result=>!result.userId||result.userId===user.id) &&
+         !remaining.some(result=>!result.userId||result.userId===user.id)){
+        status('Resultado guardado en la liga.');await refresh();
+      }
     }finally{flushing=false}
   }
   window.CloudLeagues={
     async submitRun(result){
       const pending=JSON.parse(localStorage.getItem('cartas_pending_league_results')||'[]');
-      if(!pending.some(x=>x.attemptId===result.attemptId)) pending.push(result);
+      if(!pending.some(x=>x.attemptId===result.attemptId)) pending.push({...result,userId:user?.id});
       localStorage.setItem('cartas_pending_league_results',JSON.stringify(pending));
       await flushPending();
     },
@@ -177,8 +183,11 @@
     if(error)throw error;
   }));
   $('#cloudSignOut').addEventListener('click',()=>action(async()=>{
+    try{await window.CartasProgress?.flush()}catch{}
     await check(await client.auth.signOut());
-    user=null;leagues=[];active=null;showAuth();renderLeagues();status('Sesión cerrada.');
+    user=null;leagues=[];active=null;
+    await window.CartasProgress?.setUser(null);
+    showAuth();renderLeagues();status('Sesión cerrada.');
   }));
   $('#cloudCreate').addEventListener('click',()=>action(async()=>{
     const title=$('#cloudNewLeague').value.trim();
@@ -237,12 +246,19 @@
   }
   client.auth.onAuthStateChange((_event,session)=>{
     user=session?.user || null;showAuth();
-    if(user)setTimeout(async()=>{
+    const current=user;
+    setTimeout(async()=>{
+      await window.CartasProgress?.setUser(current);
+      if(!current){leagues=[];active=null;members=[];attempts=[];daily=[];renderLeagues();return}
       await flushPending();await refresh();
       const result=window.CartasGame?.dailyResult();
       if(result)window.CloudLeagues.submitDaily(madridDay(),result);
     },0);
   });
-  client.auth.getSession().then(({data})=>{user=data.session?.user||null;showAuth();if(user)refresh()});
+  client.auth.getSession().then(async({data})=>{
+    user=data.session?.user||null;showAuth();
+    await window.CartasProgress?.setUser(user);
+    if(user)refresh();
+  });
   showAuth();
 })();
