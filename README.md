@@ -1,4 +1,4 @@
-# Cartas del Mundo — versión 5.0 (ligas privadas)
+# Cartas del Mundo — versión 5.1 (ligas y progreso en Google)
 
 ## Subir a GitHub Pages
 
@@ -12,9 +12,9 @@ En móvil, tanto la pantalla del jugador como la selección de modo muestran acc
 
 ## Ligas entre amigos: conexión de la nube
 
-Esta versión contiene la interfaz y la lógica de las ligas, pero necesita un proyecto Supabase propio para activar Google y guardar resultados. Hasta configurarlo, el juego libre, el álbum y los logros siguen funcionando como antes.
+El proyecto publicado utiliza Supabase para las ligas privadas y para el progreso personal asociado a cada cuenta de Google. Sin sesión, el juego libre sigue guardándose en el navegador y se puede importar al entrar con Google.
 
-1. Crea un proyecto en [Supabase](https://supabase.com/). En **SQL Editor**, ejecuta entero `supabase/001_private_leagues.sql` una sola vez. Crea las tablas, las políticas de acceso y las funciones de la liga.
+1. En un proyecto nuevo de [Supabase](https://supabase.com/), ejecuta en orden `supabase/001_private_leagues.sql` y `supabase/002_player_progress.sql` una sola vez. En el proyecto `elmundoencartas` ambas migraciones ya están aplicadas. Crean las ligas y el progreso por cuenta, con políticas de acceso por usuario.
 2. En Google Cloud, configura una aplicación OAuth para web. En **Authorized redirect URIs** añade la dirección que muestra Supabase para Google: `https://TU-PROYECTO.supabase.co/auth/v1/callback`. Copia el identificador y el secreto de Google al proveedor **Google** de Supabase Auth. Si la aplicación de Google está en modo de pruebas, añade los correos de los amigos como usuarios de prueba.
 3. En **Supabase → Authentication → URL Configuration**, pon la URL pública exacta de tu juego como Site URL y en Redirect URLs. Para GitHub Pages de un repositorio, sería del tipo `https://USUARIO.github.io/REPOSITORIO/`. Incluye también cualquier otra URL desde la que vayas a probar el juego.
 4. En **Project Settings → API Keys** copia la **publishable key** y la URL del proyecto a `cloud-config.js`. Por ejemplo:
@@ -27,7 +27,7 @@ Esta versión contiene la interfaz y la lógica de las ligas, pero necesita un p
    ```
 
    La clave publicable se puede incluir en GitHub Pages. No incluyas la clave secreta ni `service_role` en ningún archivo del juego.
-5. Sube **todo** el contenido del ZIP a GitHub Pages, incluidos `cloud-config.js`, `cloud-leagues.js` y la carpeta `supabase` (esta última solo documenta la base de datos y no se ejecuta en GitHub). Entra en Liga, inicia sesión con Google, crea una liga e invita a otra cuenta para comprobar la clasificación.
+5. Publica `cloud-config.js`, `cloud-progress.js`, `cloud-leagues.js` y los demás archivos en GitHub Pages. La carpeta `supabase` documenta las migraciones y no se ejecuta en GitHub. Entra en Liga, inicia sesión con Google, crea una liga e invita a otra cuenta para comprobar la clasificación.
 
 ### Reglas de liga
 
@@ -37,7 +37,7 @@ Banderas, Capitales y Mixto dan 10 puntos por acierto (máximo 100). Estudio da 
 
 Los intentos se reservan al comenzar. Salir, cerrar la página o perder la conexión durante un reto consume ese intento. Si un resultado termina mientras falla la conexión, se guarda temporalmente en este navegador para reintentar la subida. El botón «Actualizar» vuelve a comprobar los resultados. Las partidas libres no gastan intentos ni suman a la liga.
 
-El álbum, los logros y el historial anterior siguen guardados en el navegador; no se copian automáticamente a otras cuentas ni a la nube. Los resultados de liga se comparten solo con sus miembros mediante las políticas de la base de datos. Esta primera versión es una competición amistosa: como las preguntas se ejecutan en el navegador, una persona que manipule el código puede falsear respuestas. Para una competición pública con premios hará falta validar cada respuesta en un servidor.
+El nombre, el álbum (incluidos favoritos), los pines del misterio, los logros, el historial, las estadísticas y las rachas se sincronizan con la cuenta de Google. El progreso existente en el navegador se importa al iniciar sesión; si se juega sin conexión, los cambios quedan allí y se reintentan más tarde. Los cambios en varios dispositivos se combinan sin volver a bloquear cartas o logros y sin duplicar partidas ya sincronizadas. Al salir de la cuenta, su progreso se conserva por separado en ese navegador. Los resultados de liga se comparten solo con sus miembros mediante las políticas de la base de datos. Esta versión es una competición amistosa: como las preguntas se ejecutan en el navegador, una persona que manipule el código puede falsear respuestas. Para una competición pública con premios hará falta validar cada respuesta en un servidor.
 
 ## Misterio del día: países
 
@@ -59,6 +59,6 @@ Los pines mantienen un marco dorado común. España, Japón e Islandia incorpora
 
 ## Verificación técnica
 
-Ejecuta `node tests/smoke.cjs` y `node tests/cloud.cjs`. Comprueban catálogo y respaldo, modos de juego, Supervivencia, Estudio, silueta y cuatro opciones para los 199 países, tres pistas con fuentes, la respuesta única, logros, álbum, resultado final y flujo de las ligas. El inicio real con Google y las políticas SQL requieren las credenciales del proyecto Supabase para una prueba de extremo a extremo.
+Ejecuta `node tests/smoke.cjs`, `node tests/cloud.cjs` y `node tests/progress.cjs`. Comprueban el juego, las ligas simuladas, la importación de progreso, la mezcla entre dos dispositivos y el cambio de cuenta. La política de acceso de `game_player_progress` se ha comprobado en Supabase con dos identidades simuladas dentro de una transacción revertida. El primer inicio de sesión real tras publicar esta versión verificará el traslado del historial existente.
 
 El catálogo mundial se sigue cargando desde la fuente original al jugar; si no hay conexión, las partidas normales ofrecen el respaldo europeo, pero el Misterio del día utiliza las pistas y siluetas locales de los 199 países sin depender de esa descarga.
